@@ -1,0 +1,55 @@
+$white: #eee;
+
+#home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+#profilePic {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+
+  img {
+    height: 92%;
+    align-self: center;
+    border-radius: 100%;
+    object-fit: contain;
+  }
+}
+
+#socialIcons {
+  height: 50px;
+  position: absolute;
+  align-self: center;
+
+  a {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: relative;
+    margin-right: 2vmin;
+
+    img {
+      height: 92%;
+      object-fit: contain;
+    }
+  }
+
+  a:nth-child(2) {
+    margin-right: 40vmin;
+  }
+
+  a:last-child {
+    margin-right: 0;
+  }
+}

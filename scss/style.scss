@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:700');
+
+@import 'reset';
+@import 'statics';
+@import 'home';
+@import 'about';
+@import 'portfolio';
+@import 'blog';
+@import 'contact';
+
+.container {
+  background-image: url('../images/background1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
