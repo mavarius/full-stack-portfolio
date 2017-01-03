@@ -1,4 +1,9 @@
 #blog {
+  background-image: url("../images/background4.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
   height: 100vh; }
 
 /*# sourceMappingURL=blog.css.map */

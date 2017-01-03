@@ -1,4 +1,6 @@
 #contact {
-  height: 100vh; }
+  background-image: url("../images/background5.jpeg"); }
+  #contact .sectionContainer .colorBlock {
+    background-color: rgba(232, 175, 16, 0.9); }
 
 /*# sourceMappingURL=contact.css.map */

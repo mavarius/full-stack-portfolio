@@ -1,9 +1,62 @@
 #about {
-  background-image: url("../images/background2.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: fixed;
-  height: 100vh; }
+  background-image: url("../images/background2.jpeg"); }
+  #about .sectionContainer {
+    justify-content: space-between;
+    align-items: center; }
+    #about .sectionContainer .colorBlock {
+      background-color: rgba(25, 40, 46, 0.9); }
+      #about .sectionContainer .colorBlock .textBlock #toolbox ul {
+        font-family: "Josefin Slab", serif;
+        font-weight: 300;
+        text-align: center; }
+        #about .sectionContainer .colorBlock .textBlock #toolbox ul li {
+          display: inline-block;
+          vertical-align: baseline;
+          margin: 1.5vmin; }
+          #about .sectionContainer .colorBlock .textBlock #toolbox ul li img {
+            vertical-align: baseline;
+            height: 3vmin;
+            margin-right: 1vmin; }
+      #about .sectionContainer .colorBlock .downloadLink {
+        font-family: "Josefin Slab", serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 5vh 0 5vh 0;
+        display: block; }
+        #about .sectionContainer .colorBlock .downloadLink a {
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.6); }
+        #about .sectionContainer .colorBlock .downloadLink a:hover {
+          text-decoration: none;
+          color: white; }
+      #about .sectionContainer .colorBlock p {
+        font-family: "Josefin Slab", serif;
+        font-weight: 300;
+        line-height: 1.2em; }
+  #about .clearBlock {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+    box-sizing: border-box; }
+    #about .clearBlock .profilePic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25vw;
+      height: 25vw;
+      border-radius: 100vmax;
+      overflow: hidden;
+      border: 1px solid #19282e;
+      background-color: rgba(255, 255, 255, 0.4); }
+      #about .clearBlock .profilePic img {
+        height: 100%;
+        width: 100%;
+        border-radius: 100vmax;
+        object-fit: cover; }
+    @media (min-width: 1200px) {
+      #about .clearBlock .profilePic {
+        border: 3px solid #19282e; } }
 
 /*# sourceMappingURL=about.css.map */

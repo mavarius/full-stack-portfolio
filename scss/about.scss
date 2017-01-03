@@ -1,10 +1,103 @@
-$darkGlass: rgba(0, 0, 0, 0.8);
+// media queries
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
+// colors
+$teal: rgba(25, 40, 46, 1);
+$tealGlass: rgba(25, 40, 46, .9);
+
+$heading: 'Josefin Slab', serif;
+$bodyText: 'Open Sans', sans-serif;
 
 #about {
   background-image: url('../images/background2.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: fixed;
-  height: 100vh;
+
+  .sectionContainer {
+    justify-content: space-between;
+    align-items: center;
+
+    .colorBlock {
+      background-color: $tealGlass;
+
+      .textBlock {
+        #toolbox {
+          ul {
+            font-family: $heading;
+            font-weight: 300;
+            text-align: center;
+
+            li {
+              display: inline-block;
+              vertical-align: baseline;
+              margin: 1.5vmin;
+
+              img {
+                vertical-align: baseline;
+                height: 3vmin;
+                margin-right: 1vmin;
+              }
+            }
+          }
+        }
+      }
+
+      .downloadLink {
+        font-family: $heading;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 5vh 0 5vh 0;
+        display: block;
+
+        a {
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+      p {
+        font-family: $heading;
+        font-weight: 300;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  .clearBlock {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+    box-sizing: border-box;
+
+    .profilePic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25vw;
+      height: 25vw;
+      border-radius: 100vmax;
+      overflow: hidden;
+      border: 1px solid $teal;
+      background-color: rgba(255, 255, 255, .4);
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 100vmax;
+        object-fit: cover;
+      }
+    }
+
+    @media #{$desktop} {
+      .profilePic {
+        border: 3px solid $teal;
+      }
+    }
+  }
 }

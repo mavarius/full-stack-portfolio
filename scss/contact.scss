@@ -1,5 +1,21 @@
-$darkGlass: rgba(0, 0, 0, 0.8);
+// media queries
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
+// colors
+$gold: rgba(232, 175, 16, 1);
+$goldGlass: rgba(232, 175, 16, .9);
+
+$heading: 'Josefin Slab', serif;
+$bodyText: 'Open Sans', sans-serif;
+
 
 #contact {
-  height: 100vh;
+  background-image: url('../images/background5.jpeg');
+
+  .sectionContainer {
+    .colorBlock {
+      background-color: $goldGlass;
+    }
+  }
 }

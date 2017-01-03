@@ -1,48 +1,95 @@
-#appTitle {
+#headerBlock {
+  background-color: transparent;
+  color: #583e6b;
+  height: 10vh;
   position: fixed;
   z-index: 50;
-  top: 5vmin;
-  left: 5vmin;
-  display: flex; }
-  #appTitle .logo {
-    height: 16px;
-    align-self: flex-start;
-    margin-right: 20px; }
-  #appTitle #title {
-    font-family: "Josefin Slab", serif;
-    padding-left: 20px;
-    border-left: 1px solid rgba(0, 0, 0, 0.8);
-    color: rgba(0, 0, 0, 0.8);
-    position: relative; }
-    #appTitle #title h1 {
-      top: 2px;
-      font-size: 1.4em;
-      margin-bottom: 10px; }
-  #appTitle h2 {
-    font-size: 1em;
-    text-align: left; }
-
-nav {
-  position: fixed;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
   display: flex;
-  font-size: 1em;
-  top: 5vmin;
-  right: 5vmin;
-  color: rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  font-family: "Josefin Slab", serif;
-  text-align: right; }
-  nav #navBar {
-    float: left;
-    margin-right: 20px;
-    align-self: center; }
-  nav li {
-    display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px; }
-  nav a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.8); }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  #headerBlock #appTitle {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 5vmin;
+    margin-left: 5vmin; }
+    #headerBlock #appTitle .logo {
+      height: 1em;
+      margin-right: 20px;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+    #headerBlock #appTitle #titleBlock {
+      font-family: "Josefin Slab", serif;
+      font-weight: 700;
+      letter-spacing: .05em;
+      width: 30vw;
+      padding-left: 20px;
+      border-left: 1px solid #583e6b;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      box-sizing: border-box; }
+      #headerBlock #appTitle #titleBlock h1 {
+        top: 2px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out; }
+      #headerBlock #appTitle #titleBlock .subtitle {
+        font-size: 1em;
+        text-align: left;
+        opacity: .6;
+        visibility: visible;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out; }
+  #headerBlock nav {
+    position: relative;
+    display: flex;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-align: right;
+    margin-top: 5vmin;
+    margin-right: 5vmin; }
+    #headerBlock nav #navBar {
+      float: left;
+      margin-right: -5px;
+      align-self: center;
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+    #headerBlock nav #navBar.open {
+      margin-right: 20px;
+      opacity: 1;
+      visibility: visible; }
+    #headerBlock nav li {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+    #headerBlock nav a {
+      text-decoration: none;
+      color: #583e6b;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+    #headerBlock nav a:hover {
+      text-decoration: underline; }
 
 #navBtn {
   position: relative;
@@ -65,7 +112,7 @@ nav {
     width: 100%;
     opacity: 1;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #583e6b;
     border-radius: 10px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -96,5 +143,48 @@ nav {
   bottom: 18;
   width: 0%;
   left: 50%; }
+
+#headerBlock.shrink {
+  background-color: black;
+  color: white;
+  height: 5vh;
+  align-items: center;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  #headerBlock.shrink #appTitle {
+    margin-top: 0;
+    align-items: center; }
+    #headerBlock.shrink #appTitle #titleBlock {
+      justify-content: center;
+      border-left: 1px solid white; }
+      #headerBlock.shrink #appTitle #titleBlock h1 {
+        font-size: 1em;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out; }
+      #headerBlock.shrink #appTitle #titleBlock .subtitle {
+        font-size: 0;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out; }
+    #headerBlock.shrink #appTitle .logo {
+      height: .8em;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+  #headerBlock.shrink nav {
+    margin-top: 0; }
+    #headerBlock.shrink nav a {
+      color: white;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+  #headerBlock.shrink #navBtn span {
+    background-color: white; }
 
 /*# sourceMappingURL=statics.css.map */

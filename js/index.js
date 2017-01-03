@@ -1,20 +1,44 @@
-// NavControls
+$(document).ready(function() {
 
-const navBtn = document.getElementById('navBtn')
-const navBar = document.getElementById('navBar')
+	// Nav Controls
+	$('#navBtn').click(function() {
+		$(this).toggleClass('open');
+    $('#navBar').toggleClass('open')
+	});
 
-let openClass = 'closed'
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
 
-const toggleNavBar = () => {
-  if (navBar.class === 'open') navBar.class = 'closed'
-  else navBar.class = 'open'
+	// Header Shrink
+	var shrinkHeader = 100;
 
-  if (navBtn.class === 'open') navBtn.class = 'closed'
-  else navBtn.class = 'open'
-}
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+				$('#headerBlock').addClass('shrink');
+				$('.logoSlot').html('<img class="logo" src="./images/dcLogoWhite.svg" alt="logo">');
+      } else {
+				$('#headerBlock').removeClass('shrink');
+				$('.logoSlot').html('<img class="logo" src="./images/dcLogo.svg" alt="logo">');
+      }
+  });
 
-// $(document).ready(function(){
-// 	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-// 		$(this).toggleClass('open');
-// 	});
-// });
+	function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+  }
+});
+
+// sass --watch scss:css
+// python -m SimpleHTTPServer

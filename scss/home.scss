@@ -1,55 +1,73 @@
-$white: #eee;
+// media queries
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
+// colors
+$darkPurple: rgba(88, 62, 107, 1);
+$lightPurple: rgba(132, 116, 141, 1);
 
 #home {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: space-around;
-}
+  justify-content: center;
+  align-items: center;
 
-#profilePic {
-  align-self: center;
-  display: flex;
-  justify-content: space-around;
-  width: 30vmin;
-  height: 30vmin;
-  border-radius: 100%;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-
-  img {
-    height: 92%;
-    align-self: center;
+  .profilePic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vmin;
+    height: 40vmin;
     border-radius: 100%;
-    object-fit: contain;
-  }
-}
-
-#socialIcons {
-  height: 50px;
-  position: absolute;
-  align-self: center;
-
-  a {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    position: relative;
-    margin-right: 2vmin;
+    overflow: hidden;
+    border: 2px solid $darkPurple;
 
     img {
-      height: 92%;
+      height: 100%;
+      border-radius: 100%;
       object-fit: contain;
     }
   }
 
-  a:nth-child(2) {
-    margin-right: 40vmin;
+  @media #{$desktop} {
+    .profilePic {
+      border: 3px solid $darkPurple;
+    }
   }
 
-  a:last-child {
-    margin-right: 0;
+  #socialIcons {
+    height: 4vw;
+    position: absolute;
+
+    a {
+      display: inline-block;
+      height: 4vw;
+      width: 4vw;
+      border-radius: 100%;
+      position: relative;
+      margin-right: 4vmin;
+      opacity: .6;
+      transition: .25s ease-in-out;
+
+      img {
+        height: 92%;
+        object-fit: contain;
+      }
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    a:nth-child(2) {
+      margin-right: 20vw;
+    }
+
+    a:nth-child(3) {
+      margin-left: 20vw;
+    }
+
+    a:last-child {
+      margin-right: 0;
+    }
   }
 }

@@ -1,12 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,700|Open+Sans:300');
 
 @import 'reset';
 @import 'statics';
 @import 'home';
 @import 'about';
 @import 'portfolio';
-@import 'blog';
+// @import 'blog';
 @import 'contact';
+
+// colors
+$white: #eee;
+$darkGlass: rgba(0, 0, 0, 0.8);
+$darkPurple: rgba(88, 62, 107, 1);
+$lightPurple: rgba(132, 116, 141, 1);
+
+$heading: 'Josefin Slab', serif;
+$bodyText: 'Open Sans';
+
+html {
+  font-size: 2vmin;
+  font-family: $heading;
+}
+
+h2 {
+  display: block;
+  font-family: $heading;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4em;
+  text-align: center;
+  margin: 0 0 2.5vh 0;
+}
+
+h3 {
+  font-family: $heading;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10vh 0 2.5vh 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 5vh 0 0 0;
+}
 
 .container {
   background-image: url('../images/background1.jpeg');
@@ -16,4 +54,29 @@
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
+}
+
+.section {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+
+  .sectionContainer {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .colorBlock {
+      color: white;
+      min-height: 100vh;
+      width: 40vw;
+      padding: 15vh 2vmin 15vh 2vmin;
+      box-sizing: border-box;
+    }
+  }
 }
