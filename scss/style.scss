@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,700|Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,700|Josefin+Sans:300');
 
 @import 'reset';
 @import 'statics';
@@ -8,6 +8,10 @@
 // @import 'blog';
 @import 'contact';
 
+// media queries
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
 // colors
 $white: #eee;
 $darkGlass: rgba(0, 0, 0, 0.8);
@@ -15,43 +19,47 @@ $darkPurple: rgba(88, 62, 107, 1);
 $lightPurple: rgba(132, 116, 141, 1);
 
 $heading: 'Josefin Slab', serif;
-$bodyText: 'Open Sans';
+$bodyText: 'Josefin Sans', sans-serif;
 
 html {
-  font-size: 2vmin;
+  font-size: 4vw;
+  font-family: $bodyText;
+}
+
+h1, h2, h3, h4, h5 {
   font-family: $heading;
 }
 
 h2 {
   display: block;
-  font-family: $heading;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
   margin: 0 0 2.5vh 0;
 }
 
 h3 {
-  font-family: $heading;
-  font-size: 2.5em;
+  font-size: 2em;
   text-transform: uppercase;
   text-align: center;
   margin: 10vh 0 2.5vh 0;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-transform: uppercase;
-  margin: 5vh 0 0 0;
+  margin: 5vh 0 1vh 0;
 }
 
 .container {
   background-image: url('../images/background1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+  // background-position-x: 50%;
+  // background-position-y: 50%;
   background-position: center bottom;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 100vh;
   width: 100vw;
 }
@@ -61,7 +69,7 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-attachment: fixed;
+  background-attachment: scroll;
 
   .sectionContainer {
     width: 80vw;
@@ -74,9 +82,57 @@ h4 {
     .colorBlock {
       color: white;
       min-height: 100vh;
-      width: 40vw;
-      padding: 15vh 2vmin 15vh 2vmin;
+      width: 100%;
+      padding: 15vh 5vmin 15vh 5vmin;
       box-sizing: border-box;
     }
+  }
+}
+
+@media #{$tablet} {
+  html {
+    font-size: 2vw;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  .section {
+    .sectionContainer {
+      .colorBlock {
+        width: 40vw;
+      }
+    }
+  }
+}
+
+@media #{$desktop} {
+  html {
+    font-size: 1vw;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  .container, .section {
+    background-attachment: fixed;
   }
 }

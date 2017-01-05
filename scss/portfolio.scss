@@ -7,7 +7,6 @@ $wood: rgba(74, 56, 43, 1);
 $woodGlass: rgba(74, 56, 43, .9);
 
 $heading: 'Josefin Slab', serif;
-$bodyText: 'Open Sans', sans-serif;
 
 #portfolio {
   background-image: url('../images/background3.jpeg');
@@ -23,10 +22,9 @@ $bodyText: 'Open Sans', sans-serif;
       .portfolioItem {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         align-items: center;
         width: 80vw;
-        margin-left: -40vw;
 
         .samples {
           width: 40vw;
@@ -35,6 +33,7 @@ $bodyText: 'Open Sans', sans-serif;
           display: flex;
           justify-content: space-around;
           align-items: center;
+          flex-basis: 100%;
 
           .sampleMobile_v {
             background-image: url(../images/portfolio/phone_v.svg);
@@ -137,10 +136,10 @@ $bodyText: 'Open Sans', sans-serif;
         }
 
         .textBlock {
-          padding: 2vw;
+          padding: 5vw;
           box-sizing: border-box;
           width: 40vw;
-          font-family: $heading;
+          flex-basis: 100%;
 
           h3 {
             text-align: left;
@@ -166,6 +165,20 @@ $bodyText: 'Open Sans', sans-serif;
       hr {
         width: 60%;
         border: 1px solid rgba(0, 0, 0, .1);
+      }
+
+      @media #{$tablet} {
+        .portfolioItem {
+          margin-left: -40vw;
+
+          .samples {
+            flex-basis: 50%;
+          }
+
+          .textBlock {
+            flex-basis: 50%;
+          }
+        }
       }
     }
   }

@@ -1,3 +1,7 @@
+// media queries
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 1200px)";
+
 // colors
 $white: #eee;
 $darkPurple: rgba(88, 62, 107, 1);
@@ -17,9 +21,9 @@ $heading: 'Josefin Slab', serif;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  // -webkit-transition: .5s ease-in-out;
+  // -moz-transition: .5s ease-in-out;
+  // transition: .5s ease-in-out;
 
   #appTitle {
     position: relative;
@@ -32,16 +36,15 @@ $heading: 'Josefin Slab', serif;
     .logo {
       height: 1em;
       margin-right: 20px;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      // -webkit-transition: .5s ease-in-out;
+      // -moz-transition: .5s ease-in-out;
+      // transition: .5s ease-in-out;
     }
 
     #titleBlock {
-      font-family: $heading;
       font-weight: 700;
       letter-spacing: .05em;
-      width: 30vw;
+      width: 100%;
       padding-left: 20px;
       border-left: 1px solid $darkPurple;
       display: flex;
@@ -54,9 +57,9 @@ $heading: 'Josefin Slab', serif;
         top: 2px;
         font-size: 1.5em;
         margin-bottom: 10px;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        // -webkit-transition: .5s ease-in-out;
+        // -moz-transition: .5s ease-in-out;
+        // transition: .5s ease-in-out;
       }
 
       .subtitle {
@@ -64,9 +67,9 @@ $heading: 'Josefin Slab', serif;
         text-align: left;
         opacity: .6;
         visibility: visible;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        // -webkit-transition: .5s ease-in-out;
+        // -moz-transition: .5s ease-in-out;
+        // transition: .5s ease-in-out;
       }
     }
   }
@@ -109,9 +112,9 @@ $heading: 'Josefin Slab', serif;
     a {
       text-decoration: none;
       color: $darkPurple;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      // -webkit-transition: .5s ease-in-out;
+      // -moz-transition: .5s ease-in-out;
+      // transition: .5s ease-in-out;
     }
 
     a:hover {
@@ -198,9 +201,9 @@ $heading: 'Josefin Slab', serif;
   color: white;
   height: 5vh;
   align-items: center;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  // -webkit-transition: .5s ease-in-out;
+  // -moz-transition: .5s ease-in-out;
+  // transition: .5s ease-in-out;
 
   #appTitle {
     margin-top: 0;
@@ -214,26 +217,26 @@ $heading: 'Josefin Slab', serif;
         font-size: 1em;
         margin-bottom: 5px;
         margin-top: 5px;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        // -webkit-transition: .5s ease-in-out;
+        // -moz-transition: .5s ease-in-out;
+        // transition: .5s ease-in-out;
       }
 
       .subtitle {
         font-size: 0;
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
+        // -webkit-transition: .5s ease-in-out;
+        // -moz-transition: .5s ease-in-out;
+        // transition: .5s ease-in-out;
       }
     }
 
     .logo {
       height: .8em;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      // -webkit-transition: .5s ease-in-out;
+      // -moz-transition: .5s ease-in-out;
+      // transition: .5s ease-in-out;
     }
   }
 
@@ -242,9 +245,9 @@ $heading: 'Josefin Slab', serif;
 
     a {
       color: white;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out;
+      // -webkit-transition: .5s ease-in-out;
+      // -moz-transition: .5s ease-in-out;
+      // transition: .5s ease-in-out;
     }
   }
 

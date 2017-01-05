@@ -10,10 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; }
+  align-items: flex-start; }
   #headerBlock #appTitle {
     position: relative;
     display: flex;
@@ -23,15 +20,11 @@
     margin-left: 5vmin; }
     #headerBlock #appTitle .logo {
       height: 1em;
-      margin-right: 20px;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+      margin-right: 20px; }
     #headerBlock #appTitle #titleBlock {
-      font-family: "Josefin Slab", serif;
       font-weight: 700;
       letter-spacing: .05em;
-      width: 30vw;
+      width: 100%;
       padding-left: 20px;
       border-left: 1px solid #583e6b;
       display: flex;
@@ -42,18 +35,12 @@
       #headerBlock #appTitle #titleBlock h1 {
         top: 2px;
         font-size: 1.5em;
-        margin-bottom: 10px;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out; }
+        margin-bottom: 10px; }
       #headerBlock #appTitle #titleBlock .subtitle {
         font-size: 1em;
         text-align: left;
         opacity: .6;
-        visibility: visible;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out; }
+        visibility: visible; }
   #headerBlock nav {
     position: relative;
     display: flex;
@@ -84,10 +71,7 @@
       margin-right: 10px; }
     #headerBlock nav a {
       text-decoration: none;
-      color: #583e6b;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+      color: #583e6b; }
     #headerBlock nav a:hover {
       text-decoration: underline; }
 
@@ -148,10 +132,7 @@
   background-color: black;
   color: white;
   height: 5vh;
-  align-items: center;
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  transition: .5s ease-in-out; }
+  align-items: center; }
   #headerBlock.shrink #appTitle {
     margin-top: 0;
     align-items: center; }
@@ -161,29 +142,17 @@
       #headerBlock.shrink #appTitle #titleBlock h1 {
         font-size: 1em;
         margin-bottom: 5px;
-        margin-top: 5px;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out; }
+        margin-top: 5px; }
       #headerBlock.shrink #appTitle #titleBlock .subtitle {
         font-size: 0;
         opacity: 0;
-        visibility: hidden;
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        transition: .5s ease-in-out; }
+        visibility: hidden; }
     #headerBlock.shrink #appTitle .logo {
-      height: .8em;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+      height: .8em; }
   #headerBlock.shrink nav {
     margin-top: 0; }
     #headerBlock.shrink nav a {
-      color: white;
-      -webkit-transition: .5s ease-in-out;
-      -moz-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+      color: white; }
   #headerBlock.shrink #navBtn span {
     background-color: white; }
 

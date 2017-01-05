@@ -15,42 +15,58 @@ $lightPurple: rgba(132, 116, 141, 1);
     justify-content: center;
 
     .socialIcons {
-      height: 50vw;
       width: 80%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
 
-      .profilePic {
+      .picClear {
+        width: 100%;
+        margin-bottom: 5vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60vw;
-        height: 60vw;
-        border-radius: 100vmax;
-        overflow: hidden;
-        border: 2px solid $darkPurple;
 
-        img {
-          height: 100%;
-          border-radius: 100%;
-          object-fit: contain;
+        .profilePic {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60vmin;
+          height: 60vmin;
+          border-radius: 100vmax;
+          overflow: hidden;
+          border: 2px solid $darkPurple;
+
+
+          img {
+            height: 100%;
+            border-radius: 100%;
+            object-fit: contain;
+          }
         }
       }
 
       @media #{$tablet} {
-        .profilePic {
-          width: 40vmin;
-          height: 40vmin;
-          order: 3;
+        .picClear{
+          .profilePic {
+            width: 40vmin;
+            height: 40vmin;
+          }
         }
       }
 
       @media #{$desktop} {
-        .profilePic {
-          border: 3px solid $darkPurple;
+        .picClear {
+          width: auto;
+          margin-bottom: auto;
           order: 3;
+
+          .profilePic {
+            width: 40vmin;
+            height: 40vmin;
+            border: 3px solid $darkPurple;
+          }
         }
       }
 
@@ -65,7 +81,7 @@ $lightPurple: rgba(132, 116, 141, 1);
         transition: .25s ease-in-out;
 
         img {
-          height: 92%;
+          height: 100%;
           object-fit: contain;
         }
       }

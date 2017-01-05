@@ -9,17 +9,17 @@
       #portfolio .sectionContainer .colorBlock .portfolioItem {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         align-items: center;
-        width: 80vw;
-        margin-left: -40vw; }
+        width: 80vw; }
         #portfolio .sectionContainer .colorBlock .portfolioItem .samples {
           width: 40vw;
           padding: 2vw;
           box-sizing: border-box;
           display: flex;
           justify-content: space-around;
-          align-items: center; }
+          align-items: center;
+          flex-basis: 100%; }
           #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile_v {
             background-image: url(../images/portfolio/phone_v.svg);
             background-size: contain;
@@ -94,10 +94,10 @@
                 width: 85%;
                 height: 85%; }
         #portfolio .sectionContainer .colorBlock .portfolioItem .textBlock {
-          padding: 2vw;
+          padding: 5vw;
           box-sizing: border-box;
           width: 40vw;
-          font-family: "Josefin Slab", serif; }
+          flex-basis: 100%; }
           #portfolio .sectionContainer .colorBlock .portfolioItem .textBlock h3 {
             text-align: left;
             margin: 0 0 .75vh 0; }
@@ -114,5 +114,12 @@
       #portfolio .sectionContainer .colorBlock hr {
         width: 60%;
         border: 1px solid rgba(0, 0, 0, 0.1); }
+      @media (min-width: 768px) {
+        #portfolio .sectionContainer .colorBlock .portfolioItem {
+          margin-left: -40vw; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples {
+            flex-basis: 50%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .textBlock {
+            flex-basis: 50%; } }
 
 /*# sourceMappingURL=portfolio.css.map */

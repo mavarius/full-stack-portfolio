@@ -22,7 +22,6 @@ $bodyText: 'Open Sans', sans-serif;
       .textBlock {
         #toolbox {
           ul {
-            font-family: $heading;
             font-weight: 300;
             text-align: center;
 
@@ -42,8 +41,6 @@ $bodyText: 'Open Sans', sans-serif;
       }
 
       .downloadLink {
-        font-family: $heading;
-        font-size: 1em;
         text-transform: uppercase;
         text-align: center;
         margin: 5vh 0 5vh 0;
@@ -61,8 +58,6 @@ $bodyText: 'Open Sans', sans-serif;
       }
 
       p {
-        font-family: $heading;
-        font-weight: 300;
         line-height: 1.2em;
       }
     }

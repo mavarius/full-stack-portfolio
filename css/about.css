@@ -6,7 +6,6 @@
     #about .sectionContainer .colorBlock {
       background-color: rgba(25, 40, 46, 0.9); }
       #about .sectionContainer .colorBlock .textBlock #toolbox ul {
-        font-family: "Josefin Slab", serif;
         font-weight: 300;
         text-align: center; }
         #about .sectionContainer .colorBlock .textBlock #toolbox ul li {
@@ -18,8 +17,6 @@
             height: 3vmin;
             margin-right: 1vmin; }
       #about .sectionContainer .colorBlock .downloadLink {
-        font-family: "Josefin Slab", serif;
-        font-size: 1em;
         text-transform: uppercase;
         text-align: center;
         margin: 5vh 0 5vh 0;
@@ -31,8 +28,6 @@
           text-decoration: none;
           color: white; }
       #about .sectionContainer .colorBlock p {
-        font-family: "Josefin Slab", serif;
-        font-weight: 300;
         line-height: 1.2em; }
   #about .clearBlock {
     width: 40vw;

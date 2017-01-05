@@ -6,10 +6,6 @@ $desktop: "(min-width: 1200px)";
 $gold: rgba(232, 175, 16, 1);
 $goldGlass: rgba(232, 175, 16, .9);
 
-$heading: 'Josefin Slab', serif;
-$bodyText: 'Open Sans', sans-serif;
-
-
 #contact {
   background-image: url('../images/background5.jpeg');
 
@@ -27,7 +23,6 @@ $bodyText: 'Open Sans', sans-serif;
         a {
           font-weight: 300;
           color: rgba(255, 255, 255, 0.6);
-          font-size: 1em;
           text-transform: uppercase;
           margin: 1vh 0 1vh 0;
           display: block;
@@ -53,7 +48,7 @@ $bodyText: 'Open Sans', sans-serif;
             transition: .25s ease-in-out;
 
             img {
-              height: 92%;
+              height: 100%;
               object-fit: contain;
               filter: saturate(0);
               filter: brightness(10);
