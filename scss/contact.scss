@@ -16,6 +16,59 @@ $bodyText: 'Open Sans', sans-serif;
   .sectionContainer {
     .colorBlock {
       background-color: $goldGlass;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 5vh;
+
+      .textBlock {
+        text-align: center;
+
+        a {
+          font-weight: 300;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 1em;
+          text-transform: uppercase;
+          margin: 1vh 0 1vh 0;
+          display: block;
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        .socialIcons {
+          height: 4vh;
+          margin: 5vmin 0 10vmin 0;
+
+          a {
+            display: inline-block;
+            height: 4vmax;
+            width: 4vmax;
+            border-radius: 100%;
+            position: relative;
+            margin-right: 4vmin;
+            opacity: .6;
+            transition: .25s ease-in-out;
+
+            img {
+              height: 92%;
+              object-fit: contain;
+              filter: saturate(0);
+              filter: brightness(10);
+            }
+          }
+
+          a:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      footer {
+        text-align: center;
+      }
     }
   }
 }

@@ -11,63 +11,84 @@ $lightPurple: rgba(132, 116, 141, 1);
   justify-content: center;
   align-items: center;
 
-  .profilePic {
-    display: flex;
+  .sectionContainer {
     justify-content: center;
-    align-items: center;
-    width: 40vmin;
-    height: 40vmin;
-    border-radius: 100%;
-    overflow: hidden;
-    border: 2px solid $darkPurple;
 
-    img {
-      height: 100%;
-      border-radius: 100%;
-      object-fit: contain;
-    }
-  }
+    .socialIcons {
+      height: 50vw;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
 
-  @media #{$desktop} {
-    .profilePic {
-      border: 3px solid $darkPurple;
-    }
-  }
+      .profilePic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 60vw;
+        border-radius: 100vmax;
+        overflow: hidden;
+        border: 2px solid $darkPurple;
 
-  #socialIcons {
-    height: 4vw;
-    position: absolute;
-
-    a {
-      display: inline-block;
-      height: 4vw;
-      width: 4vw;
-      border-radius: 100%;
-      position: relative;
-      margin-right: 4vmin;
-      opacity: .6;
-      transition: .25s ease-in-out;
-
-      img {
-        height: 92%;
-        object-fit: contain;
+        img {
+          height: 100%;
+          border-radius: 100%;
+          object-fit: contain;
+        }
       }
-    }
 
-    a:hover {
-      opacity: 1;
-    }
+      @media #{$tablet} {
+        .profilePic {
+          width: 40vmin;
+          height: 40vmin;
+          order: 3;
+        }
+      }
 
-    a:nth-child(2) {
-      margin-right: 20vw;
-    }
+      @media #{$desktop} {
+        .profilePic {
+          border: 3px solid $darkPurple;
+          order: 3;
+        }
+      }
 
-    a:nth-child(3) {
-      margin-left: 20vw;
-    }
+      a {
+        display: inline-block;
+        height: 8vmin;
+        width: 8vmin;
+        border-radius: 100%;
+        position: relative;
+        margin: 2vmin;
+        opacity: .6;
+        transition: .25s ease-in-out;
 
-    a:last-child {
-      margin-right: 0;
+        img {
+          height: 92%;
+          object-fit: contain;
+        }
+      }
+
+      a:hover {
+        opacity: 1;
+      }
+
+      a:first-child {
+        order: 1;
+      }
+
+      a:nth-child(2) {
+        order: 2;
+      }
+
+      a:nth-child(3) {
+        order: 4;
+      }
+
+      a:last-child {
+        order: 5;
+      }
     }
   }
 }

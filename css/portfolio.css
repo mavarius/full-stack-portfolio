@@ -20,7 +20,7 @@
           display: flex;
           justify-content: space-around;
           align-items: center; }
-          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile {
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile_v {
             background-image: url(../images/portfolio/phone_v.svg);
             background-size: contain;
             background-repeat: no-repeat;
@@ -30,19 +30,69 @@
             display: inline-flex;
             align-items: center;
             justify-content: center; }
-            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile img {
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile_v img {
               object-fit: contain;
-              height: 78%; }
-          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet {
+              height: 90%;
+              width: 90%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_v {
+            background-image: url(../images/portfolio/tablet_v.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 30vmin;
+            height: 41.6vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_v img {
+              object-fit: contain;
+              height: 90%;
+              width: 90%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_h {
             width: 100%; }
-            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet img {
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_h img {
               object-fit: contain;
               width: 100%; }
           #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleDesktop {
-            width: 100%; }
+            background-image: url(../images/portfolio/laptop.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 63vmin;
+            height: 40vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; }
             #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleDesktop img {
+              margin-top: -10%;
               object-fit: contain;
-              width: 100%; }
+              height: 75%;
+              width: 75%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet {
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleMobile_v {
+              position: absolute;
+              width: 20%;
+              height: 20%;
+              margin-left: 5%;
+              align-self: flex-end;
+              margin-top: -1%; }
+              #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleMobile_v img {
+                width: 79%;
+                height: 79%; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleTablet_v {
+              position: absolute;
+              width: 30%;
+              height: 30%;
+              margin-left: 10%;
+              align-self: flex-end;
+              margin-top: -1%; }
+              #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleTablet_v img {
+                width: 85%;
+                height: 85%; }
         #portfolio .sectionContainer .colorBlock .portfolioItem .textBlock {
           padding: 2vw;
           box-sizing: border-box;

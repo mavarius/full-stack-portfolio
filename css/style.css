@@ -229,45 +229,59 @@ table {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #home .profilePic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vmin;
-    height: 40vmin;
-    border-radius: 100%;
-    overflow: hidden;
-    border: 2px solid #583e6b; }
-    #home .profilePic img {
-      height: 100%;
-      border-radius: 100%;
-      object-fit: contain; }
-  @media (min-width: 1200px) {
-    #home .profilePic {
-      border: 3px solid #583e6b; } }
-  #home #socialIcons {
-    height: 4vw;
-    position: absolute; }
-    #home #socialIcons a {
-      display: inline-block;
-      height: 4vw;
-      width: 4vw;
-      border-radius: 100%;
-      position: relative;
-      margin-right: 4vmin;
-      opacity: .6;
-      transition: .25s ease-in-out; }
-      #home #socialIcons a img {
-        height: 92%;
-        object-fit: contain; }
-    #home #socialIcons a:hover {
-      opacity: 1; }
-    #home #socialIcons a:nth-child(2) {
-      margin-right: 20vw; }
-    #home #socialIcons a:nth-child(3) {
-      margin-left: 20vw; }
-    #home #socialIcons a:last-child {
-      margin-right: 0; }
+  #home .sectionContainer {
+    justify-content: center; }
+    #home .sectionContainer .socialIcons {
+      height: 50vw;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; }
+      #home .sectionContainer .socialIcons .profilePic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 60vw;
+        border-radius: 100vmax;
+        overflow: hidden;
+        border: 2px solid #583e6b; }
+        #home .sectionContainer .socialIcons .profilePic img {
+          height: 100%;
+          border-radius: 100%;
+          object-fit: contain; }
+      @media (min-width: 768px) {
+        #home .sectionContainer .socialIcons .profilePic {
+          width: 40vmin;
+          height: 40vmin;
+          order: 3; } }
+      @media (min-width: 1200px) {
+        #home .sectionContainer .socialIcons .profilePic {
+          border: 3px solid #583e6b;
+          order: 3; } }
+      #home .sectionContainer .socialIcons a {
+        display: inline-block;
+        height: 8vmin;
+        width: 8vmin;
+        border-radius: 100%;
+        position: relative;
+        margin: 2vmin;
+        opacity: .6;
+        transition: .25s ease-in-out; }
+        #home .sectionContainer .socialIcons a img {
+          height: 92%;
+          object-fit: contain; }
+      #home .sectionContainer .socialIcons a:hover {
+        opacity: 1; }
+      #home .sectionContainer .socialIcons a:first-child {
+        order: 1; }
+      #home .sectionContainer .socialIcons a:nth-child(2) {
+        order: 2; }
+      #home .sectionContainer .socialIcons a:nth-child(3) {
+        order: 4; }
+      #home .sectionContainer .socialIcons a:last-child {
+        order: 5; }
 
 #about {
   background-image: url("../images/background2.jpeg"); }
@@ -352,7 +366,7 @@ table {
           display: flex;
           justify-content: space-around;
           align-items: center; }
-          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile {
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile_v {
             background-image: url(../images/portfolio/phone_v.svg);
             background-size: contain;
             background-repeat: no-repeat;
@@ -362,19 +376,69 @@ table {
             display: inline-flex;
             align-items: center;
             justify-content: center; }
-            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile img {
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleMobile_v img {
               object-fit: contain;
-              height: 78%; }
-          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet {
+              height: 90%;
+              width: 90%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_v {
+            background-image: url(../images/portfolio/tablet_v.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 30vmin;
+            height: 41.6vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_v img {
+              object-fit: contain;
+              height: 90%;
+              width: 90%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_h {
             width: 100%; }
-            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet img {
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleTablet_h img {
               object-fit: contain;
               width: 100%; }
           #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleDesktop {
-            width: 100%; }
+            background-image: url(../images/portfolio/laptop.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 63vmin;
+            height: 40vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center; }
             #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleDesktop img {
+              margin-top: -10%;
               object-fit: contain;
-              width: 100%; }
+              height: 75%;
+              width: 75%; }
+          #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet {
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleMobile_v {
+              position: absolute;
+              width: 20%;
+              height: 20%;
+              margin-left: 5%;
+              align-self: flex-end;
+              margin-top: -1%; }
+              #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleMobile_v img {
+                width: 79%;
+                height: 79%; }
+            #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleTablet_v {
+              position: absolute;
+              width: 30%;
+              height: 30%;
+              margin-left: 10%;
+              align-self: flex-end;
+              margin-top: -1%; }
+              #portfolio .sectionContainer .colorBlock .portfolioItem .samples .sampleSet .sampleTablet_v img {
+                width: 85%;
+                height: 85%; }
         #portfolio .sectionContainer .colorBlock .portfolioItem .textBlock {
           padding: 2vw;
           box-sizing: border-box;
@@ -400,7 +464,44 @@ table {
 #contact {
   background-image: url("../images/background5.jpeg"); }
   #contact .sectionContainer .colorBlock {
-    background-color: rgba(232, 175, 16, 0.9); }
+    background-color: rgba(232, 175, 16, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5vh; }
+    #contact .sectionContainer .colorBlock .textBlock {
+      text-align: center; }
+      #contact .sectionContainer .colorBlock .textBlock a {
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1em;
+        text-transform: uppercase;
+        margin: 1vh 0 1vh 0;
+        display: block; }
+      #contact .sectionContainer .colorBlock .textBlock a:hover {
+        text-decoration: none;
+        color: white; }
+      #contact .sectionContainer .colorBlock .textBlock .socialIcons {
+        height: 4vh;
+        margin: 5vmin 0 10vmin 0; }
+        #contact .sectionContainer .colorBlock .textBlock .socialIcons a {
+          display: inline-block;
+          height: 4vmax;
+          width: 4vmax;
+          border-radius: 100%;
+          position: relative;
+          margin-right: 4vmin;
+          opacity: .6;
+          transition: .25s ease-in-out; }
+          #contact .sectionContainer .colorBlock .textBlock .socialIcons a img {
+            height: 92%;
+            object-fit: contain;
+            filter: saturate(0);
+            filter: brightness(10); }
+        #contact .sectionContainer .colorBlock .textBlock .socialIcons a:hover {
+          opacity: 1; }
+    #contact .sectionContainer .colorBlock footer {
+      text-align: center; }
 
 html {
   font-size: 2vmin;

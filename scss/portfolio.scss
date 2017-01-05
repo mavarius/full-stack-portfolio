@@ -36,7 +36,7 @@ $bodyText: 'Open Sans', sans-serif;
           justify-content: space-around;
           align-items: center;
 
-          .sampleMobile {
+          .sampleMobile_v {
             background-image: url(../images/portfolio/phone_v.svg);
             background-size: contain;
             background-repeat: no-repeat;
@@ -49,11 +49,30 @@ $bodyText: 'Open Sans', sans-serif;
 
             img {
               object-fit: contain;
-              height: 78%;
+              height: 90%;
+              width: 90%;
             }
           }
 
-          .sampleTablet {
+          .sampleTablet_v {
+            background-image: url(../images/portfolio/tablet_v.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 30vmin;
+            height: 41.6vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              object-fit: contain;
+              height: 90%;
+              width: 90%;
+            }
+          }
+
+          .sampleTablet_h {
             width: 100%;
 
             img {
@@ -63,11 +82,56 @@ $bodyText: 'Open Sans', sans-serif;
           }
 
           .sampleDesktop {
-            width: 100%;
+            background-image: url(../images/portfolio/laptop.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 63vmin;
+            height: 40vmin;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
             img {
+              margin-top: -10%;
               object-fit: contain;
-              width: 100%;
+              height: 75%;
+              width: 75%;
+            }
+          }
+
+          .sampleSet {
+            width: 40vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .sampleMobile_v {
+              position: absolute;
+              width: 20%;
+              height: 20%;
+              margin-left: 5%;
+              align-self: flex-end;
+              margin-top: -1%;
+
+              img {
+                width: 79%;
+                height: 79%
+              }
+            }
+
+            .sampleTablet_v {
+              position: absolute;
+              width: 30%;
+              height: 30%;
+              margin-left: 10%;
+              align-self: flex-end;
+              margin-top: -1%;
+
+              img {
+                width: 85%;
+                height: 85%
+              }
             }
           }
         }
