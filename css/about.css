@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center; }
     #about .sectionContainer .colorBlock {
-      background-color: rgba(25, 40, 46, 0.9); }
+      background-color: rgba(25, 40, 46, 0.9);
+      padding-bottom: 0; }
       #about .sectionContainer .colorBlock .textBlock #toolbox ul {
         font-weight: 300;
         text-align: center; }
@@ -30,11 +31,16 @@
       #about .sectionContainer .colorBlock p {
         line-height: 1.2em; }
   #about .clearBlock {
-    width: 40vw;
     display: flex;
     justify-content: center;
     padding: 5vw;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(25, 40, 46, 0.9); }
+    @media (min-width: 768px) {
+      #about .clearBlock {
+        width: 40vw;
+        background-color: transparent; } }
     #about .clearBlock .profilePic {
       display: flex;
       justify-content: center;
@@ -45,13 +51,13 @@
       overflow: hidden;
       border: 1px solid #19282e;
       background-color: rgba(255, 255, 255, 0.4); }
+      @media (min-width: 1200px) {
+        #about .clearBlock .profilePic {
+          border: 3px solid #19282e; } }
       #about .clearBlock .profilePic img {
         height: 100%;
         width: 100%;
         border-radius: 100vmax;
         object-fit: cover; }
-    @media (min-width: 1200px) {
-      #about .clearBlock .profilePic {
-        border: 3px solid #19282e; } }
 
 /*# sourceMappingURL=about.css.map */

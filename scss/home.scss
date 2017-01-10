@@ -14,8 +14,8 @@ $lightPurple: rgba(132, 116, 141, 1);
   .sectionContainer {
     justify-content: center;
 
-    .socialIcons {
-      width: 80%;
+    .homeElements {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -76,7 +76,7 @@ $lightPurple: rgba(132, 116, 141, 1);
         width: 8vmin;
         border-radius: 100%;
         position: relative;
-        margin: 2vmin;
+        margin: 2vmin 0;
         opacity: .6;
         transition: .25s ease-in-out;
 

@@ -39,7 +39,7 @@ table {
 #headerBlock {
   background-color: transparent;
   color: #583e6b;
-  height: 10vh;
+  padding: 2.5vmin;
   position: fixed;
   z-index: 50;
   top: 0;
@@ -53,16 +53,15 @@ table {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin-top: 5vmin;
-    margin-left: 5vmin; }
+    flex-grow: 5;
+    justify-content: flex-start; }
     #headerBlock #appTitle .logo {
-      height: 1em;
-      margin-right: 20px; }
+      height: 1em; }
     #headerBlock #appTitle #titleBlock {
       font-weight: 700;
       letter-spacing: .05em;
       width: 100%;
+      margin-left: 20px;
       padding-left: 20px;
       border-left: 1px solid #583e6b;
       display: flex;
@@ -72,41 +71,84 @@ table {
       box-sizing: border-box; }
       #headerBlock #appTitle #titleBlock h1 {
         top: 2px;
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin-bottom: 10px; }
+        @media (min-width: 768px) {
+          #headerBlock #appTitle #titleBlock h1 {
+            font-size: 1.5em; } }
       #headerBlock #appTitle #titleBlock .subtitle {
-        font-size: 1em;
+        font-size: .8em;
         text-align: left;
         opacity: .6;
         visibility: visible; }
+        @media (min-width: 768px) {
+          #headerBlock #appTitle #titleBlock .subtitle {
+            font-size: 1em; } }
   #headerBlock nav {
+    box-sizing: border-box;
     position: relative;
     display: flex;
+    align-items: flex-start;
     font-size: 1em;
     text-transform: uppercase;
     font-family: "Josefin Slab", serif;
     font-weight: 700;
     letter-spacing: .05em;
-    text-align: right;
-    margin-top: 5vmin;
-    margin-right: 5vmin; }
+    text-align: center; }
+    @media (min-width: 768px) {
+      #headerBlock nav {
+        text-align: right; } }
     #headerBlock nav #navBar {
-      float: left;
-      margin-right: -5px;
+      box-sizing: border-box;
       align-self: center;
       visibility: hidden;
+      background-color: black;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
       opacity: 0;
       -webkit-transition: .5s ease-in-out;
       -moz-transition: .5s ease-in-out;
       transition: .5s ease-in-out; }
+      @media (min-width: 768px) {
+        #headerBlock nav #navBar {
+          float: left;
+          margin-right: -5px;
+          background-color: inherit;
+          width: auto;
+          height: auto;
+          position: relative;
+          left: auto;
+          top: auto; } }
+      #headerBlock nav #navBar ul {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10vh; }
+        @media (min-width: 768px) {
+          #headerBlock nav #navBar ul {
+            display: inline-block;
+            height: auto;
+            margin-top: auto; } }
     #headerBlock nav #navBar.open {
-      margin-right: 20px;
       opacity: 1;
       visibility: visible; }
+      @media (min-width: 768px) {
+        #headerBlock nav #navBar.open {
+          margin-right: 20px; } }
     #headerBlock nav li {
-      display: inline-block;
-      margin-left: 10px;
-      margin-right: 10px; }
+      font-size: 2em; }
+      @media (min-width: 768px) {
+        #headerBlock nav li {
+          font-size: 1em;
+          display: inline-block;
+          margin-left: 10px;
+          margin-right: 10px; } }
     #headerBlock nav a {
       text-decoration: none;
       color: #583e6b; }
@@ -114,8 +156,9 @@ table {
       text-decoration: underline; }
 
 #navBtn {
-  position: relative;
+  right: 0;
   width: 25px;
+  min-width: 25px;
   height: 25px;
   background-color: transparent;
   border: none;
@@ -127,6 +170,10 @@ table {
   transition: .5s ease-in-out;
   cursor: pointer;
   display: inline-block; }
+  @media (min-width: 768px) {
+    #navBtn {
+      position: relative;
+      right: auto; } }
   #navBtn span {
     display: block;
     position: absolute;
@@ -169,10 +216,11 @@ table {
 #headerBlock.shrink {
   background-color: black;
   color: white;
-  height: 5vh;
   align-items: center; }
+  @media (min-width: 768px) {
+    #headerBlock.shrink {
+      height: 5vh; } }
   #headerBlock.shrink #appTitle {
-    margin-top: 0;
     align-items: center; }
     #headerBlock.shrink #appTitle #titleBlock {
       justify-content: center;
@@ -188,7 +236,7 @@ table {
     #headerBlock.shrink #appTitle .logo {
       height: .8em; }
   #headerBlock.shrink nav {
-    margin-top: 0; }
+    align-items: center; }
     #headerBlock.shrink nav a {
       color: white; }
   #headerBlock.shrink #navBtn span {
@@ -200,19 +248,19 @@ table {
   align-items: center; }
   #home .sectionContainer {
     justify-content: center; }
-    #home .sectionContainer .socialIcons {
-      width: 80%;
+    #home .sectionContainer .homeElements {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap; }
-      #home .sectionContainer .socialIcons .picClear {
+      #home .sectionContainer .homeElements .picClear {
         width: 100%;
         margin-bottom: 5vh;
         display: flex;
         justify-content: center;
         align-items: center; }
-        #home .sectionContainer .socialIcons .picClear .profilePic {
+        #home .sectionContainer .homeElements .picClear .profilePic {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -221,44 +269,44 @@ table {
           border-radius: 100vmax;
           overflow: hidden;
           border: 2px solid #583e6b; }
-          #home .sectionContainer .socialIcons .picClear .profilePic img {
+          #home .sectionContainer .homeElements .picClear .profilePic img {
             height: 100%;
             border-radius: 100%;
             object-fit: contain; }
       @media (min-width: 768px) {
-        #home .sectionContainer .socialIcons .picClear .profilePic {
+        #home .sectionContainer .homeElements .picClear .profilePic {
           width: 40vmin;
           height: 40vmin; } }
       @media (min-width: 1200px) {
-        #home .sectionContainer .socialIcons .picClear {
+        #home .sectionContainer .homeElements .picClear {
           width: auto;
           margin-bottom: auto;
           order: 3; }
-          #home .sectionContainer .socialIcons .picClear .profilePic {
+          #home .sectionContainer .homeElements .picClear .profilePic {
             width: 40vmin;
             height: 40vmin;
             border: 3px solid #583e6b; } }
-      #home .sectionContainer .socialIcons a {
+      #home .sectionContainer .homeElements a {
         display: inline-block;
         height: 8vmin;
         width: 8vmin;
         border-radius: 100%;
         position: relative;
-        margin: 2vmin;
+        margin: 2vmin 0;
         opacity: .6;
         transition: .25s ease-in-out; }
-        #home .sectionContainer .socialIcons a img {
+        #home .sectionContainer .homeElements a img {
           height: 100%;
           object-fit: contain; }
-      #home .sectionContainer .socialIcons a:hover {
+      #home .sectionContainer .homeElements a:hover {
         opacity: 1; }
-      #home .sectionContainer .socialIcons a:first-child {
+      #home .sectionContainer .homeElements a:first-child {
         order: 1; }
-      #home .sectionContainer .socialIcons a:nth-child(2) {
+      #home .sectionContainer .homeElements a:nth-child(2) {
         order: 2; }
-      #home .sectionContainer .socialIcons a:nth-child(3) {
+      #home .sectionContainer .homeElements a:nth-child(3) {
         order: 4; }
-      #home .sectionContainer .socialIcons a:last-child {
+      #home .sectionContainer .homeElements a:last-child {
         order: 5; }
 
 #about {
@@ -267,7 +315,8 @@ table {
     justify-content: space-between;
     align-items: center; }
     #about .sectionContainer .colorBlock {
-      background-color: rgba(25, 40, 46, 0.9); }
+      background-color: rgba(25, 40, 46, 0.9);
+      padding-bottom: 0; }
       #about .sectionContainer .colorBlock .textBlock #toolbox ul {
         font-weight: 300;
         text-align: center; }
@@ -293,11 +342,16 @@ table {
       #about .sectionContainer .colorBlock p {
         line-height: 1.2em; }
   #about .clearBlock {
-    width: 40vw;
     display: flex;
     justify-content: center;
     padding: 5vw;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(25, 40, 46, 0.9); }
+    @media (min-width: 768px) {
+      #about .clearBlock {
+        width: 40vw;
+        background-color: transparent; } }
     #about .clearBlock .profilePic {
       display: flex;
       justify-content: center;
@@ -308,14 +362,14 @@ table {
       overflow: hidden;
       border: 1px solid #19282e;
       background-color: rgba(255, 255, 255, 0.4); }
+      @media (min-width: 1200px) {
+        #about .clearBlock .profilePic {
+          border: 3px solid #19282e; } }
       #about .clearBlock .profilePic img {
         height: 100%;
         width: 100%;
         border-radius: 100vmax;
         object-fit: cover; }
-    @media (min-width: 1200px) {
-      #about .clearBlock .profilePic {
-        border: 3px solid #19282e; } }
 
 #portfolio {
   background-image: url("../images/background3.jpeg"); }
@@ -460,10 +514,10 @@ table {
       #contact .sectionContainer .colorBlock .textBlock a:hover {
         text-decoration: none;
         color: white; }
-      #contact .sectionContainer .colorBlock .textBlock .socialIcons {
+      #contact .sectionContainer .colorBlock .textBlock .homeElements {
         height: 4vh;
         margin: 5vmin 0 10vmin 0; }
-        #contact .sectionContainer .colorBlock .textBlock .socialIcons a {
+        #contact .sectionContainer .colorBlock .textBlock .homeElements a {
           display: inline-block;
           height: 4vmax;
           width: 4vmax;
@@ -472,18 +526,18 @@ table {
           margin-right: 4vmin;
           opacity: .6;
           transition: .25s ease-in-out; }
-          #contact .sectionContainer .colorBlock .textBlock .socialIcons a img {
+          #contact .sectionContainer .colorBlock .textBlock .homeElements a img {
             height: 100%;
             object-fit: contain;
             filter: saturate(0);
             filter: brightness(10); }
-        #contact .sectionContainer .colorBlock .textBlock .socialIcons a:hover {
+        #contact .sectionContainer .colorBlock .textBlock .homeElements a:hover {
           opacity: 1; }
     #contact .sectionContainer .colorBlock footer {
       text-align: center; }
 
 html {
-  font-size: 4vw;
+  font-size: 4vmin;
   font-family: "Josefin Sans", sans-serif; }
 
 h1, h2, h3, h4, h5 {

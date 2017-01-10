@@ -4,19 +4,19 @@
   align-items: center; }
   #home .sectionContainer {
     justify-content: center; }
-    #home .sectionContainer .socialIcons {
-      width: 80%;
+    #home .sectionContainer .homeElements {
+      width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap; }
-      #home .sectionContainer .socialIcons .picClear {
+      #home .sectionContainer .homeElements .picClear {
         width: 100%;
         margin-bottom: 5vh;
         display: flex;
         justify-content: center;
         align-items: center; }
-        #home .sectionContainer .socialIcons .picClear .profilePic {
+        #home .sectionContainer .homeElements .picClear .profilePic {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -25,44 +25,44 @@
           border-radius: 100vmax;
           overflow: hidden;
           border: 2px solid #583e6b; }
-          #home .sectionContainer .socialIcons .picClear .profilePic img {
+          #home .sectionContainer .homeElements .picClear .profilePic img {
             height: 100%;
             border-radius: 100%;
             object-fit: contain; }
       @media (min-width: 768px) {
-        #home .sectionContainer .socialIcons .picClear .profilePic {
+        #home .sectionContainer .homeElements .picClear .profilePic {
           width: 40vmin;
           height: 40vmin; } }
       @media (min-width: 1200px) {
-        #home .sectionContainer .socialIcons .picClear {
+        #home .sectionContainer .homeElements .picClear {
           width: auto;
           margin-bottom: auto;
           order: 3; }
-          #home .sectionContainer .socialIcons .picClear .profilePic {
+          #home .sectionContainer .homeElements .picClear .profilePic {
             width: 40vmin;
             height: 40vmin;
             border: 3px solid #583e6b; } }
-      #home .sectionContainer .socialIcons a {
+      #home .sectionContainer .homeElements a {
         display: inline-block;
         height: 8vmin;
         width: 8vmin;
         border-radius: 100%;
         position: relative;
-        margin: 2vmin;
+        margin: 2vmin 0;
         opacity: .6;
         transition: .25s ease-in-out; }
-        #home .sectionContainer .socialIcons a img {
+        #home .sectionContainer .homeElements a img {
           height: 100%;
           object-fit: contain; }
-      #home .sectionContainer .socialIcons a:hover {
+      #home .sectionContainer .homeElements a:hover {
         opacity: 1; }
-      #home .sectionContainer .socialIcons a:first-child {
+      #home .sectionContainer .homeElements a:first-child {
         order: 1; }
-      #home .sectionContainer .socialIcons a:nth-child(2) {
+      #home .sectionContainer .homeElements a:nth-child(2) {
         order: 2; }
-      #home .sectionContainer .socialIcons a:nth-child(3) {
+      #home .sectionContainer .homeElements a:nth-child(3) {
         order: 4; }
-      #home .sectionContainer .socialIcons a:last-child {
+      #home .sectionContainer .homeElements a:last-child {
         order: 5; }
 
 /*# sourceMappingURL=home.css.map */

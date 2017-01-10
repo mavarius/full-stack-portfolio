@@ -18,6 +18,7 @@ $bodyText: 'Open Sans', sans-serif;
 
     .colorBlock {
       background-color: $tealGlass;
+      padding-bottom: 0;
 
       .textBlock {
         #toolbox {
@@ -64,11 +65,16 @@ $bodyText: 'Open Sans', sans-serif;
   }
 
   .clearBlock {
-    width: 40vw;
     display: flex;
     justify-content: center;
     padding: 5vw;
     box-sizing: border-box;
+    width: 100%;
+    background-color: $tealGlass;
+    @media #{$tablet} {
+      width: 40vw;
+      background-color: transparent;
+    }
 
     .profilePic {
       display: flex;
@@ -80,18 +86,15 @@ $bodyText: 'Open Sans', sans-serif;
       overflow: hidden;
       border: 1px solid $teal;
       background-color: rgba(255, 255, 255, .4);
+      @media #{$desktop} {
+        border: 3px solid $teal;
+      }
 
       img {
         height: 100%;
         width: 100%;
         border-radius: 100vmax;
         object-fit: cover;
-      }
-    }
-
-    @media #{$desktop} {
-      .profilePic {
-        border: 3px solid $teal;
       }
     }
   }

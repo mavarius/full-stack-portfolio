@@ -17,10 +17,10 @@
       #contact .sectionContainer .colorBlock .textBlock a:hover {
         text-decoration: none;
         color: white; }
-      #contact .sectionContainer .colorBlock .textBlock .socialIcons {
+      #contact .sectionContainer .colorBlock .textBlock .homeElements {
         height: 4vh;
         margin: 5vmin 0 10vmin 0; }
-        #contact .sectionContainer .colorBlock .textBlock .socialIcons a {
+        #contact .sectionContainer .colorBlock .textBlock .homeElements a {
           display: inline-block;
           height: 4vmax;
           width: 4vmax;
@@ -29,12 +29,12 @@
           margin-right: 4vmin;
           opacity: .6;
           transition: .25s ease-in-out; }
-          #contact .sectionContainer .colorBlock .textBlock .socialIcons a img {
+          #contact .sectionContainer .colorBlock .textBlock .homeElements a img {
             height: 100%;
             object-fit: contain;
             filter: saturate(0);
             filter: brightness(10); }
-        #contact .sectionContainer .colorBlock .textBlock .socialIcons a:hover {
+        #contact .sectionContainer .colorBlock .textBlock .homeElements a:hover {
           opacity: 1; }
     #contact .sectionContainer .colorBlock footer {
       text-align: center; }
